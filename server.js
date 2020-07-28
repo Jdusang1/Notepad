@@ -32,9 +32,9 @@ app.post("/api/notes", function (req, res) {
     fs.readFile("db/db.json", function (err, data) {
         if (err) throw err
         const notes = JSON.parse(data)
-        note.id = notes.length
+        note.id = notes.length + 1
         notes.push(note)
-        console.log(notes)
+        // console.log(notes)
 
         fs.writeFile("db/db.json", JSON.stringify(notes), function (err) {
             if (err) throw err
@@ -44,12 +44,12 @@ app.post("/api/notes", function (req, res) {
 });
 
 app.delete("/api/notes/:id", function (req, res) {
-    const id = parseInt(req.params.id);
+    const id = parseInt(req.params.id) - 1;
 
     fs.readFile("db/db.json", function (err, data) {
         if (err) throw err
         const notes = JSON.parse(data)
-        console.log(notes[id])
+        // console.log(notes[id])
         notes.splice(id, 1)
         notes.forEach(function (item, index) {
             item.id = index
@@ -64,7 +64,7 @@ app.delete("/api/notes/:id", function (req, res) {
 
         })
     })
-    console.log(req.params.id)
+    // console.log(req.params.id)
 })
 
 app.get("*", function (req, res) {
