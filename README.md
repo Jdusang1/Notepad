@@ -1,7 +1,8 @@
-![GitHub] 
-  https://img.shields.io/badge/license-ISC-blue.svg
+![GitHub](https://img.shields.io/badge/license-ISC-blue.svg)
   
   # Notepad 
+
+  The application can be found here: <https://protected-dawn-89204.herokuapp.com/notes>
     
   ## Use
   This application is used for creating and storing notes.
@@ -34,6 +35,6 @@
   
   ## Questions
     
-  https://github.com/Jdusang1
+  <https://github.com/Jdusang1>
     
   Email: Johndusang1@gmail.com
